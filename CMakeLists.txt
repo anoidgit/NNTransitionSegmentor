@@ -16,7 +16,7 @@ add_definitions(-DUSE_CUDA=0)
 IF(CMAKE_BUILD_TYPE MATCHES Debug)
     SET( CMAKE_CXX_FLAGS  "-w -msse3 -funroll-loops -O0" )
 ELSE()
-    SET( CMAKE_CXX_FLAGS  "-w -msse3 -funroll-loops -O3" )
+    SET( CMAKE_CXX_FLAGS  "-w -msse3 -funroll-loops -Ofast" )
 ENDIF()
 ####for   openblas
 add_definitions(-DMSHADOW_USE_CUDA=0)
